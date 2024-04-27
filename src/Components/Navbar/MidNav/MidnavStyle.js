@@ -7,6 +7,7 @@ const main_div = {
 
 const nav_logo = {
   width: "10%",
+  pl:2
 };
 
 const searchBar = {
@@ -41,6 +42,15 @@ const search={
     color: "white",
     backgroundColor: "#333333",
     borderRadius: "2px",
+    transition:"0.5s",
+    ":hover":{
+        cursor:"pointer",
+        backgroundColor:"black",
+        fontWeight:600
+
+        
+      }
+    
   }
 
 

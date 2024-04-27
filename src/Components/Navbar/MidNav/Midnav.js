@@ -1,6 +1,14 @@
 import React from "react";
 import { Box, Divider, Typography, alpha, styled } from "@mui/material";
-import { blog, blog_space, main_div, nav_logo, search, searchBar, sign_up } from "./MidnavStyle";
+import {
+  blog,
+  blog_space,
+  main_div,
+  nav_logo,
+  search,
+  searchBar,
+  sign_up,
+} from "./MidnavStyle";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -21,8 +29,6 @@ const Search = styled("div")(({ theme }) => ({
     width: "auto",
   },
 }));
-
-
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "black",
@@ -53,15 +59,13 @@ const Midnav = () => {
         />
       </Box>
       <Box sx={searchBar}>
-        <Search
-          sx={search}
-        >
+        <Search sx={search}>
           <StyledInputBase
             placeholder="Search products or brands"
             inputProps={{ "aria-label": "search" }}
           />
 
-          <SearchIcon sx={{ position: "absolute", right: 15,color:"grey" }} />
+          <SearchIcon sx={{ position: "absolute", right: 15, color: "grey" }} />
         </Search>
       </Box>
       <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -69,9 +73,7 @@ const Midnav = () => {
         <MyMenu />
       </Box>
       <Divider orientation="vertical" variant="middle" flexItem />
-      <Box
-        sx={blog}
-      >
+      <Box sx={blog}>
         <Typography variant="body2" sx={blog_space}>
           Blog
         </Typography>
@@ -82,11 +84,13 @@ const Midnav = () => {
           Sign In
         </Typography>
       </Box>
-      <Box sx={{ width: "12%", margin: "auto" }}>
-        <Typography
-          variant="body1"
-          sx={sign_up}
-        >
+      <Box
+        sx={{
+          width: "12%",
+          margin: "auto",
+        }}
+      >
+        <Typography variant="body1" sx={sign_up}>
           Sign Up to Shop
         </Typography>
       </Box>
