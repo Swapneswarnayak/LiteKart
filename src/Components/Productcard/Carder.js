@@ -20,6 +20,7 @@ const Carder = ({ props }) => {
             height: 220,
             position: "relative",
             transition: "display 3s ease",
+            borderBottom: "1px solid #D3D3D3",
 
             "&:hover .box": {
               display: "block",

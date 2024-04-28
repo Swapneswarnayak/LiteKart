@@ -3,7 +3,7 @@ import React from "react";
 
 import "./Mainbodystyle.css";
 import Carder from "../../Productcard/Carder";
-import productList from "../ProductList";
+import {productList,productList1,productList2} from "../ProductList";
 import AdCard from "../../Productcard/Adcard";
 
 const Mainbody = () => {
@@ -45,10 +45,13 @@ const Mainbody = () => {
             return <Carder key={i} props={el} />;
           })}
           <AdCard image={"/adv1.png"} />
-          {productList.map((el, i) => {
+          {productList1.map((el, i) => {
             return <Carder key={i} props={el} />;
           })}
           <AdCard image={"/adv2.png"} />
+          {productList2.map((el, i) => {
+            return <Carder key={i} props={el} />;
+          })}
 
         </Grid>
       </Box>
