@@ -1,8 +1,11 @@
+
+
 const main_div = {
   display: "flex",
   padding: "10px",
 //   marginTop: "10px",
-  alignItems:"center"
+  alignItems:"center",
+
 };
 
 const nav_logo = {

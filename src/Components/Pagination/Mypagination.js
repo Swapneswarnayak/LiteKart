@@ -1,17 +1,6 @@
-import { Box, Pagination, PaginationItem } from "@mui/material";
+import { Box, Pagination } from "@mui/material";
 import React from "react";
 import Divider from "@mui/material/Divider";
-
-
-const renderPaginationItem = (item) => {
-  const { page } = item;
-  if (page <= 11 || page === 72) {
-    return <PaginationItem {...item} />;
-  } else if (page === 11 + 1) {
-    return <PaginationItem disabled>...</PaginationItem>;
-  }
-  return null;
-};
 
 const Mypagination = () => {
   return (

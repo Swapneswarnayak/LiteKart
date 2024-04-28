@@ -17,17 +17,42 @@ const BottomNav = () => {
   ];
   return (
     <>
-    <Box sx={{  display:"flex", justifyContent:"center", gap:"20px",mb:1,mt:1 }}>
-      {navbarMenu.map((el, i) => {
-        return <Typography variant="body2" sx={{letterSpacing:"0.5px", fontFamily:"monospace", color:"#333333"}}>{el}</Typography>;
-      })}
-    </Box>
-        <Divider  />
-        <Typography variant="body2" sx={{p:2, display:"flex"}}>
-        Home / &nbsp; <Typography variant="body2" sx={{color:"grey"}}>All European brands</Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          mb: 1,
+          mt: 1,
+//           position:"fixed",
+//   top:30,
+//   zIndex:1,
+//   backgroundColor:"white"
+        }}
+      >
+        {navbarMenu.map((el, i) => {
+          return (
+            <Typography
+              variant="body2"
+              sx={{
+                letterSpacing: "0.5px",
+                fontFamily: "monospace",
+                color: "#333333",
+              }}
+            >
+              {el}
+            </Typography>
+          );
+        })}
+      </Box>
+      <Divider />
+      <Typography variant="body2" sx={{ p: 2, display: "flex" }}>
+        Home / &nbsp;{" "}
+        <Typography variant="body2" sx={{ color: "grey" }}>
+          All European brands
         </Typography>
-        <Divider />
-
+      </Typography>
+      <Divider />
     </>
   );
 };
