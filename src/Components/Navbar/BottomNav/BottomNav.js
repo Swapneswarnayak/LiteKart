@@ -24,10 +24,10 @@ const BottomNav = () => {
           gap: "20px",
           mb: 1,
           mt: 1,
-//           position:"fixed",
-//   top:30,
-//   zIndex:1,
-//   backgroundColor:"white"
+          //           position:"fixed",
+          //   top:30,
+          //   zIndex:1,
+          //   backgroundColor:"white"
         }}
       >
         {navbarMenu.map((el, i) => {
@@ -45,14 +45,7 @@ const BottomNav = () => {
           );
         })}
       </Box>
-      <Divider />
-      <Typography variant="body2" sx={{ p: 2, display: "flex" }}>
-        Home / &nbsp;{" "}
-        <Typography variant="body2" sx={{ color: "grey" }}>
-          All European brands
-        </Typography>
-      </Typography>
-      <Divider />
+      <Divider sx={{mt:1.5}} />
     </>
   );
 };
