@@ -1,19 +1,22 @@
-import { CCarousel, CCarouselItem, CImage } from "@coreui/react";
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import BasicDemo from "../../Slider/Slider";
+
+import "./Mainbodystyle.css";
+import Carder from "../../Productcard/Carder";
+import productList from "../ProductList";
+import AdCard from "../../Productcard/Adcard";
 
 const Mainbody = () => {
   return (
     <Box
       sx={{
         width: "80%",
-        border: "2px solid green",
+        // border: "2px solid green",
         p: 3,
         fontFamily: "serif",
       }}
     >
-      <Box sx={{ border: "2px solid black", mb: 2 }}>
+      <Box sx={{ mb: 2 }}>
         <Typography
           variant="h5"
           sx={{
@@ -36,14 +39,17 @@ const Mainbody = () => {
         </p>
       </Box>
 
-      <Box sx={{ flexGrow: 1, border: "2px solid yellow" }}>
-        <Grid container spacing={2}>
-          <Grid item xs={3} sx={{ border: "2px solid red" }}>
-            <BasicDemo />
-          </Grid>
-          <Grid item xs={4} sx={{ border: "2px solid red" }}>
-            hellow
-          </Grid>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container columnSpacing={1.2} rowSpacing={1.2}>
+          {productList.map((el, i) => {
+            return <Carder key={i} props={el} />;
+          })}
+          <AdCard image={"/adv1.png"} />
+          {productList.map((el, i) => {
+            return <Carder key={i} props={el} />;
+          })}
+          <AdCard image={"/adv2.png"} />
+
         </Grid>
       </Box>
     </Box>
